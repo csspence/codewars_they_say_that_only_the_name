@@ -12,6 +12,23 @@ isOpposite("","") should return false;
 */
 
 function isOpposite(s1,s2){
-  //coding here...
+  let string = '';
   
+  if(s1.length === 0 && s2.length === 0) {
+    return false;
+  }
+  
+  for(let i = 0; i < s1.length; i++) {
+    if(s1[i] === s1[i].toLowerCase()) {
+      string += s1[i].toUpperCase();
+    } else {
+      string += s1[i].toLowerCase();
+    }
+  }
+  
+  if(s2 === string) {
+    return true;
+  } else {
+    return false;
+  }
 }
